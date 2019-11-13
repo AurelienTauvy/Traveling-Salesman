@@ -4,4 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+    circuit.cpp \
+    helper.cpp \
+    point.cpp
+
+HEADERS += \
+    circuit.h \
+    helper.h \
+    point.h
