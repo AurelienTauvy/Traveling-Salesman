@@ -12,9 +12,9 @@ class Helper
 {
 public:
     Helper();
-    list <Point> map;
+    Point * listOfPoints[10];
     int static const numberOfCircuits = 64;
-    list <Circuit> circuits;
+    Circuit * circuits[numberOfCircuits];
 
     bool upgradeflag;
     //Circuit circuits[numberOfCircuits];

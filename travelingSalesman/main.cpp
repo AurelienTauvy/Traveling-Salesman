@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-    Helper h = new Helper();
+    Helper * h = new Helper();
 
-    h.manage();
+    h->manage();
     return 0;
 }
