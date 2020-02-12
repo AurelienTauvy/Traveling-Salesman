@@ -8,6 +8,7 @@ public:
     Point(int x, int y);
     int getX();
     int getY();
+    bool equals(Point p);
 private:
     int x;
     int y;

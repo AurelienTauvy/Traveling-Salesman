@@ -36,3 +36,22 @@ void Circuit::randomize(){
 //    }
 
 }
+
+Point * Circuit::getPoint(int index){
+    if (index < 10 && index >= 0){
+        return this->map[index];
+    } else {
+        //TODO Throw an error
+        return new Point(0,0);
+    }
+}
+
+bool Circuit::equals(Circuit circuitToCompare){
+    bool result = true;
+    for (int i = 0; i < 10; i++){
+        if (!(circuitToCompare.getPoint(i)->equals(*this->getPoint(i)))){
+            result = false;
+        }
+    }
+    return result;
+}

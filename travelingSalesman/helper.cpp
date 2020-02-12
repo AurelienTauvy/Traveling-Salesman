@@ -22,7 +22,7 @@ Helper::Helper()
         Circuit * c = new Circuit(this->listOfPoints);
         c->randomize();//TODO Do here ? Or thread ?
         this->circuits[i] = c;
-        std::cout << c->map[i%10]->getY()<<"\n";
+        //std::cout << c->map[i%10]->getY()<<"\n";
     }
 
     /*thread v(fonction, param1, param2);
@@ -33,7 +33,8 @@ Helper::Helper()
 void Helper::manage(){
 
     while(this->upgradeflag){
-    //REPRODUCTION
+
+        //Create 4 arrays for circuits, one for each Thread we'll make
     for (int i = 0; i < 4; i++){
         for (int j = i; j < numberOfCircuits; j+=4){
             //list circuits a l'indice i
@@ -42,7 +43,9 @@ void Helper::manage(){
     //new thread qui gère la reprod de ce tableau
     }
 
-    //join les threads ??
+    //TODO : Extract in functions
+    //REPRODUCTION
+
 
     //\REPRODUCTION
 
